@@ -154,7 +154,7 @@
 							<div class="pl-2">
 								<h4 class="text-sm text-primary">{exp.period}</h4>
 								<p class="text-sm text-secondary">({exp.modality} / {exp.country})</p>
-								<p class="text-xs xl:whitespace-nowrap">
+								<p class="text-xs">
 									{exp.technologies.join(' | ')}
 								</p>
 							</div>
