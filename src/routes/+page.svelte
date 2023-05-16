@@ -73,7 +73,14 @@
 	];
 </script>
 
-<div class="grid grid-cols-6 w-5/6 m-auto py-4">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div
+	id="doc"
+	class="grid grid-cols-6 w-5/6 m-auto py-4"
+	on:click={() => {
+		print();
+	}}
+>
 	<div class="grid-cols-1">
 		<!-- Just for spacing -->
 	</div>
@@ -102,6 +109,7 @@
 			</div>
 		</div>
 		<div
+			id="profile"
 			class="col-span-1 row-span-4 bg-primary text-white px-9 py-8 flex flex-col flex-nowrap justify-start gap-10 text-center rounded-md"
 		>
 			<div>
@@ -195,3 +203,11 @@
 		<!-- Just for spacing -->
 	</div>
 </div>
+
+<style lang="postcss">
+	@media print {
+		#doc {
+			display: block;
+		}
+	}
+</style>
